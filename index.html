@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customized T-Shirt Order Form</title>
+    <link rel="stylesheet" href="./exp4.css" />
+    <script src="/exp4.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <center><h1>Customized T-Shirt Order Form</h1></center>
+      <div class="main2">
+        <div class="img">
+          <img
+            width="200"
+            src="./images/tshirt.png"
+            alt="no image"
+          />
+        </div>
+        <div class="form">
+          <form action="/submit_order" method="post">
+            <table>
+              <tr>
+                <td>
+                  <label for="tagline"
+                    ><b><u>Tagline:</u></b></label
+                  >
+                </td>
+                <td>
+                  <input type="text" id="tagline" name="tagline" required />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="color"
+                    ><b><u>Color:</u></b></label
+                  >
+                </td>
+                <td>
+                  <select id="color" name="color" required>
+                    <option value="" disabled selected>Select color</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <!-- Add more color options as needed -->
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="size"
+                    ><b><u>Size:</u></b></label
+                  >
+                </td>
+                <td>
+                  <select id="size" name="size" required>
+                    <option value="" disabled selected>Select size</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <!-- Add more size options as needed -->
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="quantity"
+                    ><b><u>Quantity:</u></b></label
+                  >
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    id="quantity"
+                    name="quantity"
+                    min="1"
+                    required
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="delivery_date"
+                    ><b><u>Delivery Date:</u></b></label
+                  >
+                </td>
+                <td>
+                  <input
+                    type="date"
+                    id="delivery_date"
+                    name="delivery_date"
+                    required
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="delivery_details"
+                    ><b><u>Other Delivery Details:</u></b></label
+                  >
+                </td>
+                <td>
+                  <textarea
+                    id="delivery_details"
+                    name="delivery_details"
+                    rows="4"
+                    cols="50"
+                  ></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="mobile"
+                    ><b><u>Mobile No:</u></b></label
+                  >
+                </td>
+                <td>
+                  <input type="tel" id="mobile" name="mobile" required />
+                </td>
+              </tr>
+            </table>
+
+            <!-- Submit button -->
+            <div class="submit">
+              <input type="submit" value="Place Order" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="receipt"></div>
+  </body>
+</html>
